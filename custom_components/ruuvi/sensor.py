@@ -23,6 +23,8 @@ _LOGGER = logging.getLogger(__name__)
 
 # Warnings form BLESON are polluting the home assistant logs and exhausting IO
 logging.getLogger('bleson').setLevel(logging.ERROR)
+# Warnings (about e.g. data format 3) from simple_ruuvitag are polluting logs
+logging.getLogger('simple_ruuvitag').setLevel(logging.ERROR)
 
 CONF_ADAPTER = 'adapter'
 MAX_UPDATE_FREQUENCY = 'max_update_frequency'
